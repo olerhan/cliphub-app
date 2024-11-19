@@ -1,0 +1,211 @@
+# Miscellaneous (Çeşitli geçici ve sistem dosyaları)
+## Java sınıf dosyaları (proje derlemesi sırasında oluşur)
+*.class
+*.lock
+## Log dosyaları
+*.log
+## Python bytecode dosyaları
+*.pyc
+## Swap dosyaları (Bazı editörlerin geçici dosyaları)
+*.swp
+## macOS sistem dosyası (gereksizdir)
+.DS_Store
+## Atom editörüne ait geçici dosyalar
+.atom/
+## Derleme işlemleriyle ilgili log dosyaları
+.buildlog/
+## Terminal geçmiş dosyaları
+.history
+## SVN (Subversion) dosyaları
+.svn/
+## Geçici çalışma dizini (default)
+migrate_working_dir/
+
+# IntelliJ IDEA ve Android Studio ile ilgili
+## IntelliJ IDEA proje dosyaları
+*.iml
+## IntelliJ IDEA proje dosyası
+*.ipr
+## IntelliJ IDEA çalışma dosyası
+*.iws
+## IntelliJ IDEA proje ayarları dizini
+.idea/
+
+# Visual Studio Code related (VSCode ayarları)
+.classpath
+.project
+.settings/
+.vscode/*
+
+# packages file containing multi-root paths
+.packages.generated
+
+# Flutter/Dart/Pub related
+## API dokümantasyonu
+**/doc/api/
+## Dart araç dosyaları
+.dart_tool/
+## Flutter eklenti dosyaları
+.flutter-plugins
+## Flutter bağımlılık dosyaları
+.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+.packages
+.pub-preload-cache/
+## Pub bağımlılıklarının cache dosyaları
+.pub-cache/
+## Pub paket yöneticisi dosyaları
+.pub/
+## Projelerin derlendiği build dizinleri
+build/
+flutter_*.png
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
+
+# Android Studio will place build artifacts # Android'deki build yapılandırmaları
+## Debug build dosyaları (default)
+/android/app/debug
+## Profiling build dosyaları (default)
+/android/app/profile
+## Release build dosyaları (default)
+/android/app/release
+
+# Android related
+**/android/**/gradle-wrapper.jar
+.gradle/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+*.jks
+## Gradle geçici dosyaları (CGpt ilavesi)
+**/android/.gradle/
+## Android Studio proje dosyaları (CGpt ilavesi)
+**/android/.idea/
+
+# iOS/XCode related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+## CocoaPods bağımlılık dosyaları
+**/ios/**/Pods/
+## Symlink dosyaları
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/.last_build_id
+## Flutter uygulama framework dosyası
+**/ios/Flutter/App.framework
+## Flutter framework dosyası
+**/ios/Flutter/Flutter.framework
+## Flutter CocoaPods dosyası
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+## Flutter motor dosyaları (CGpt ilavesi)
+**/ios/Flutter/engine/
+
+# macOS
+**/Flutter/ephemeral/
+## CocoaPods bağımlılık dosyaları
+**/Pods/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/ephemeral
+**/xcuserdata/
+## Flutter framework dosyası (CGpt ilavesi)
+**/macos/Flutter/Flutter.framework
+## Flutter uygulama framework dosyası (CGpt ilavesi)
+**/macos/Flutter/App.framework
+## Flutter motor dosyaları (CGpt ilavesi)
+**/macos/Flutter/engine/
+
+# Windows
+**/windows/flutter/ephemeral/
+**/windows/flutter/generated_plugin_registrant.cc
+**/windows/flutter/generated_plugin_registrant.h
+**/windows/flutter/generated_plugins.cmake
+## Flutter build dosyaları (CGpt ilavesi)
+**/windows/flutter/
+## Debug build dosyaları (CGpt ilavesi)
+**/windows/runner/Debug/
+## Release build dosyaları (CGpt ilavesi)
+**/windows/runner/Release/
+## Profiling build dosyaları (CGpt ilavesi)
+**/windows/runner/Profile/
+## Ara build dosyaları (CGpt ilavesi)
+**/windows/runner/Intermediate/
+
+# Linux
+**/linux/flutter/ephemeral/
+**/linux/flutter/generated_plugin_registrant.cc
+**/linux/flutter/generated_plugin_registrant.h
+**/linux/flutter/generated_plugins.cmake
+
+# Coverage
+coverage/
+
+# Symbolication related
+## Sembol dosyaları
+app.*.symbols
+
+# Obfuscation related
+## Obfuscation haritaları (default)
+app.*.map.json
+
+# Temporary files (Geçici dosyalar)
+## Geçici dosyalar (CGpt ilavesi)
+tmp/
+## Geçici dosyalar (CGpt ilavesi)
+temp/
+
+# macOS sistem dosyaları
+## macOS sistem dosyaları (CGpt ilavesi)
+.AppleDouble
+## macOS ile ilgili diğer sistem dosyaları (CGpt ilavesi)
+.LSOverride
+## macOS Trash dosyaları (CGpt ilavesi)
+.Trashes
+
+# Windows sistem dosyaları
+## Windows küçük resim önbelleği dosyası (CGpt ilavesi)
+Thumbs.db
+## Windows klasör ayarlarını saklayan dosya (CGpt ilavesi)
+Desktop.ini
+## Windows çöp kutusu dosyaları (CGpt ilavesi)
+$RECYCLE.BIN/
+## Geçici dosyalar (CGpt ilavesi)
+*.tmp
+
+# ignore .firebaserc for all examples
+**/.firebaserc
+
+**/GoogleService-Info.plist
+**/google-services.json
+**/firebase_app_id_file.json
+
+# Exceptions to above rules.
+!**/ios/**/default.mode1v3
+!**/ios/**/default.mode2v3
+!**/ios/**/default.pbxuser
+!**/ios/**/default.perspectivev3
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/dev/ci/**/Gemfile.lock
+!.vscode/settings.json
