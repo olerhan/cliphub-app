@@ -67,8 +67,9 @@
 		<!-- Appwrite Client -->
 		<script src="https://cdn.jsdelivr.net/npm/appwrite@16.1.0"></script>
 		<script>
-			const { Client, Databases, ID } = Appwrite;
+			const { Client, Databases } = Appwrite;
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
 		<!-- Scripts -->
 		<script src="https://beyondend.dev/assets/js/jquery.min.js"></script>
@@ -92,6 +93,8 @@
 				event.preventDefault();
 
 				const email = document.getElementById('email-input').value;
+				// Benzersiz bir ID oluşturmak için e-postayı hashle
+				const hashedId = CryptoJS.MD5(email.trim().toLowerCase()).toString();
 				const responseMessage = document.getElementById('response-message');
 
 				try {
@@ -99,16 +102,21 @@
 					await databases.createDocument(
 						'677cb689001c625d87d9', // Veritabanı ID'si
 						'677cb6e40022a593ac8c', // Koleksiyon ID'si
-						ID.unique(), // Otomatik Belge ID
+						hashedId, // Otomatik Belge ID
 						{delistingEmail: email}, // Veriler
 					);
 
 					responseMessage.style.color = 'green';
 					responseMessage.textContent = 'E-mail başarıyla gönderildi!';
 				} catch (error) {
-					console.error(error);
-					responseMessage.style.color = 'red';
-					responseMessage.textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
+					if (error.code === 409) { // 409 Conflict hatası
+						responseMessage.style.color = 'orange';
+						responseMessage.textContent = 'Bu e-mail zaten kayıtlı!';
+					} else {
+						console.error(error);
+						responseMessage.style.color = 'red';
+						responseMessage.textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
+					}
 				}
 			});
 		</script>
