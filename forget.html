@@ -65,7 +65,10 @@
 		</footer>
 
 		<!-- Appwrite Client -->
-		<script src="https://cdn.jsdelivr.net/npm/appwrite"></script>
+		<script src="https://cdn.jsdelivr.net/npm/appwrite@16.1.0"></script>
+		<script>
+			const { Client, Databases } = Appwrite;
+		</script>
 
 		<!-- Scripts -->
 		<script src="https://beyondend.dev/assets/js/jquery.min.js"></script>
@@ -78,11 +81,11 @@
 		
 		<script>
 			// Appwrite Client Ayarları
-			const client = new Appwrite.Client()
+			const client = new Client()
 				.setEndpoint('https://cloud.appwrite.io/v1') // API Endpoint
 				.setProject('67001fae0032e9d20712'); // Proje ID
 
-			const databases = new Appwrite.Databases(client);
+			const databases = new Databases(client);
 
 			// Form Submit İşlemi
 			document.getElementById('unsubscribe-form').addEventListener('submit', async (event) => {
