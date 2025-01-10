@@ -67,7 +67,7 @@
 		<!-- Appwrite Client -->
 		<script src="https://cdn.jsdelivr.net/npm/appwrite@16.1.0"></script>
 		<script>
-			const { Client, Databases } = Appwrite;
+			const { Client, Databases, ID } = Appwrite;
 		</script>
 
 		<!-- Scripts -->
@@ -99,7 +99,7 @@
 					await databases.createDocument(
 						'677cb689001c625d87d9', // Veritabanı ID'si
 						'677cb6e40022a593ac8c', // Koleksiyon ID'si
-						ID.unique(), // Otomatik Belge ID
+						unique(), // Otomatik Belge ID
 						{delistingEmail: email}, // Veriler
 					);
 
