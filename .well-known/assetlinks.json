@@ -3,9 +3,9 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "com.beyondend.cliphub (unreviewed)",
+        "package_name": "com.beyondend.cliphub",
         "sha256_cert_fingerprints":
-          ["8D:21:8C:62:A5:90:6A:0B:95:B8:0F:1B:74:F2:E9:41:D6:0C:D4:A5:1C:44:D2:3E:72:DE:B3:F4:C8:C1:13:79"]
+          ["C4:48:7F:EA:44:BA:2A:67:96:01:23:DF:B9:B1:E8:FB:B5:4E:9E:5D:D2:B0:E1:4B:26:D6:62:72:58:01:E7:A8"]
       }
     }
   ]
